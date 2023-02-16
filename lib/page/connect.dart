@@ -5,7 +5,7 @@ import 'package:flutter_isoja/widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ConnectView extends StatefulWidget {
-  ConnectView({super.key});
+  const ConnectView({super.key});
 
   @override
   State<ConnectView> createState() => _ConnectViewState();
@@ -28,7 +28,6 @@ class _ConnectViewState extends State<ConnectView> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      final height = constraints.maxHeight;
       final width = constraints.maxWidth;
       return Scaffold(
         backgroundColor: bgColor,
@@ -110,8 +109,7 @@ class _ConnectViewState extends State<ConnectView> {
                                   return Setting(device: r.device);
                                 }));
                               }),
-                        )
-                        .toList(),
+                        ).toList(),
                   ),
                 ),
               ],
